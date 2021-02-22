@@ -1,1 +1,4 @@
-<p>favorites works!</p>
+<app-movie-card
+  *ngFor="let favorite of favorites"
+  [movieRef]="favorite"
+></app-movie-card>
