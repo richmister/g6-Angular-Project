@@ -1,1 +1,14 @@
-<p>search-movies-form works!</p>
+<form #searchTerm="ngForm"(ngSubmit)="emitSearch(searchTerm)">
+  <label for="searchTerm">Search</label>
+  <input type="text" name="searchTerm" id="searchTerm" ngModel />
+  <label for="genre">Genre</label>
+  <input name="genre" id="genre" type="text" ngModel />
+  <label for="rating">Rating</label>
+  <select name="rating" id="rating" ngModel>
+    <option value="g">G</option>
+    <option value="pg">Pg</option>
+    <option value="pg13">Pg 13</option>
+    <option value="r">R</option>
+  </select>
+  <button>Search</button>
+</form>
