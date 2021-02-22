@@ -11,6 +11,7 @@ import { FooterComponent } from './footer/footer.component';
 import { SearchMoviesFormComponent } from './search-movies-form/search-movies-form.component';
 import { HeaderComponent } from './header/header.component';
 import { MovieCardComponent } from './movie-card/movie-card.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { MovieCardComponent } from './movie-card/movie-card.component';
     FooterComponent,
     SearchMoviesFormComponent,
     HeaderComponent,
-    MovieCardComponent
+    MovieCardComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
