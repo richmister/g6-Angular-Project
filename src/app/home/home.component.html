@@ -1,1 +1,2 @@
-<app-search-movies-form></app-search-movies-form>
+<app-search-movies-form (searchEvent)="onSubmit($event)"></app-search-movies-form>
+<app-movie-card *ngFor="let movie of movieData?.results" [movieRef]="movie"></app-movie-card>

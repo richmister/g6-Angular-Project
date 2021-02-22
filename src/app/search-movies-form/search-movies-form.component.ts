@@ -8,11 +8,13 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./search-movies-form.component.css'],
 })
 export class SearchMoviesFormComponent implements OnInit {
+
   @Output() searchEvent = new EventEmitter<string>();
 
   constructor() {}
 
   ngOnInit(): void {}
+  
   emitSearch = (form: NgForm) => {
     console.log(form);
     this.searchEvent.emit(form.form.value.searchTerm);
