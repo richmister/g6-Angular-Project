@@ -1,5 +1,4 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
-import { MovieService } from '../movie.service';
 
 @Component({
   selector: 'app-movie-card',
@@ -11,12 +10,12 @@ export class MovieCardComponent implements OnInit {
   @Input() movieRef: any;
   @Input() favoritesRef: any[] = [];
 
-  constructor(private movieservice: MovieService) {}
+  constructor() {}
+
+  ngOnInit(): void {}
 
   emitFavoriteEvent = (movie: any): void => {
     this.favoriteEvent.emit(movie);
     console.log(movie);
   };
-
-  ngOnInit(): void {}
 }

@@ -16,4 +16,8 @@ export class FavoritesComponent implements OnInit {
   getAndSetFavorites = (): void => {
     this.favorites = this.movieService.getFavorites();
   };
+  onFavorite = (movie: any): void => {
+    this.movieService.toggleFavorites(movie);
+    this.getAndSetFavorites();
+  };
 }
