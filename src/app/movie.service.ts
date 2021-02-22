@@ -30,9 +30,15 @@ export class MovieService {
       },
     });
   };
-  addFavorites = (movie: any): void => {
-    this.favorites.push(movie);
-    console.log(this.favorites);
+  toggleFavorites = (movie: any): void => {
+    let index = this.favorites.findIndex((item) => {
+      return item.id === movie.id;
+    });
+    if (index === -1) {
+      this.favorites.push(movie);
+    } else {
+      this.favorites.splice(index, 1);
+    }
   };
   getFavorites = (): any[] => {
     return this.favorites;

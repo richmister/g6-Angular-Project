@@ -29,7 +29,7 @@ export class HomeComponent implements OnInit {
     });
   };
   onFavorite = (movie: any): void => {
-    this.movieService.addFavorites(movie);
+    this.movieService.toggleFavorites(movie);
     this.getAndSetFavorites();
   };
   getAndSetFavorites = (): void => {

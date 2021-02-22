@@ -1,4 +1,5 @@
 <app-movie-card
-  *ngFor="let favorite of favorites"
+  *ngFor="let favorite of favorites; index as i"
   [movieRef]="favorite"
+  (favoriteEvent)="onFavorite(favorite)"
 ></app-movie-card>
