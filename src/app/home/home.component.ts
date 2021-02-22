@@ -6,8 +6,11 @@ import { MovieService } from '../movie.service';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
+
 export class HomeComponent implements OnInit {
+
   movieData: any;
+  
   constructor(private movieService: MovieService) {}
 
   ngOnInit(): void {
@@ -20,4 +23,12 @@ export class HomeComponent implements OnInit {
       this.movieData = response;
     });
   };
+
+  onSubmit = (searchTerm: string):void => {
+    this.movieService.searchMovies(searchTerm).subscribe(
+      (response:any) => {
+        this.movieData = response;
+      }
+    )
+  }
 }
