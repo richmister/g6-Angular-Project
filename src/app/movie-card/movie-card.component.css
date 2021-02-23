@@ -1,14 +1,13 @@
-.favorite {
+.favorite, .fa-heart {
    color: white;
    background-color: red;
-   padding: 5px 25px;
    border: 0;
    border-radius: 5px;
 }
+
 .not-favorite {
-   color: red;
+   color: black;
    background-color: white;
-   padding: 5px 25px;
    border: 0;
    border-radius: 5px;
 }
