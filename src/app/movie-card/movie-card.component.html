@@ -1,10 +1,20 @@
-<div class="movie-poster">
-  <p>{{ movieRef.title }}</p>
-  <button (click)="toggleInfo()">More Info</button>
+<section class="movie-poster">
+  <div class="btn-container">
+    <button
+      class="card-btn"
+      [ngClass]="{ favorite: checkFavorite(movieRef) }"
+      (click)="emitFavoriteEvent(movieRef)"
+      *ngIf="favorited"
+    >
+      ♡
+    </button>
+    <button class="card-btn" (click)="toggleInfo()">More Info</button>
+  </div>
   <div *ngIf="isHidden">
     <p>{{ movieRef.overview }}</p>
   </div>
-  <img src="https://image.tmdb.org/t/p/w500{{ movieRef.poster_path }}" alt="Movie img" />
-  <button [ngClass]="{'favorite': checkFavorite(movieRef)}" (click)="emitFavoriteEvent(movieRef)" *ngIf="favorited"><i
-      class="far fa-heart not-favorite"></i></button>
-</div>
+  <img
+    src="https://image.tmdb.org/t/p/w500{{ movieRef.poster_path }}"
+    alt="Movie img"
+  />
+</section>

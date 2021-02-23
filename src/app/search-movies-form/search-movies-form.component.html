@@ -1,25 +1,29 @@
-<form #searchTerm="ngForm" (ngSubmit)="emitSearch(searchTerm)">
-  <label for="searchTerm">Search</label>
-  <input type="text" name="searchTerm" id="searchTerm" ngModel />
-  <button>Search</button>
-</form>
-<form #discoverForm="ngForm" (ngSubmit)="emitDiscoverEvent(discoverForm)">
-  <label for="genre">Genre</label>
-  <select name="genre" id="genre" ngModel>
-    <option value="{{genre.id}}" *ngFor="let genre of genres.genres">{{genre.name}}</option>
-  </select>
-  <label for="rating">Rating</label>
-  <select name="rating" id="rating" ngModel>
-    <option value="0">0</option>
-    <option value="1">1</option>
-    <option value="2">2</option>
-    <option value="3">3</option>
-    <option value="4">4</option>
-    <option value="5">5</option>
-    <option value="6">6</option>
-    <option value="7">7</option>
-    <option value="8">8</option>
-    <option value="9">9</option>
-  </select>
-  <button>Submit</button>
-</form>
+<section class="forms-style-section">
+  <form #searchTerm="ngForm" (ngSubmit)="emitSearch(searchTerm)">
+    <label for="searchTerm">Search</label>
+    <input type="text" name="searchTerm" id="searchTerm" ngModel />
+    <button>Search</button>
+  </form>
+  <form #discoverForm="ngForm" (ngSubmit)="emitDiscoverEvent(discoverForm)">
+    <label for="genre">Genre</label>
+    <select name="genre" id="genre" ngModel>
+      <option value="{{ genre.id }}" *ngFor="let genre of genres.genres">
+        {{ genre.name }}
+      </option>
+    </select>
+    <label for="rating">Rating</label>
+    <select name="rating" id="rating" ngModel>
+      <option value="0">0</option>
+      <option value="1">1</option>
+      <option value="2">2</option>
+      <option value="3">3</option>
+      <option value="4">4</option>
+      <option value="5">5</option>
+      <option value="6">6</option>
+      <option value="7">7</option>
+      <option value="8">8</option>
+      <option value="9">9</option>
+    </select>
+    <button>Submit</button>
+  </form>
+</section>
