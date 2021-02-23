@@ -1,7 +1,8 @@
 .movie-card-section {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  justify-content: center;
+  width: min-content;
   padding: 5px;
   align-items: center;
 }
