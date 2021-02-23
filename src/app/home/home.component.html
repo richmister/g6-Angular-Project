@@ -1,9 +1,4 @@
-<app-search-movies-form
-  (searchEvent)="onSubmit($event)"
-></app-search-movies-form>
-<app-movie-card
-  *ngFor="let movie of movieData?.results"
-  [movieRef]="movie"
-  [favoritesRef]="favorites"
-  (favoriteEvent)="onFavorite($event)"
-></app-movie-card>
+<app-search-movies-form (searchEvent)="onSubmit($event)" (discoverEvent)="onDiscoverSubmit($event)">
+</app-search-movies-form>
+<app-movie-card *ngFor="let movie of movieData?.results" [movieRef]="movie" [favoritesRef]="favorites"
+  (favoriteEvent)="onFavorite($event)"></app-movie-card>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { NgForm } from '@angular/forms';
 import { MovieService } from '../movie.service';
 
 @Component({
@@ -22,7 +23,6 @@ export class HomeComponent implements OnInit {
       this.movieData = response;
     });
   };
-
   onSubmit = (searchTerm: string): void => {
     this.movieService.searchMovies(searchTerm).subscribe((response: any) => {
       this.movieData = response;
@@ -34,5 +34,11 @@ export class HomeComponent implements OnInit {
   };
   getAndSetFavorites = (): void => {
     this.favorites = this.movieService.getFavorites();
+  };
+  onDiscoverSubmit = (form: NgForm) => {
+    this.movieService.discoverMovies(form.form.value).subscribe((response)=>{
+      console.log(response);
+      this.movieData = response;
+    });
   };
 }

@@ -1,5 +1,6 @@
 import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { MovieService } from '../movie.service';
 
 
 @Component({
@@ -9,11 +10,16 @@ import { NgForm } from '@angular/forms';
 })
 export class SearchMoviesFormComponent implements OnInit {
 
+  genres: any = [];
   @Output() searchEvent = new EventEmitter<string>();
+  @Output() discoverEvent = new EventEmitter<NgForm>();
 
-  constructor() {}
 
-  ngOnInit(): void {}
+  constructor(private movieService: MovieService) {}
+
+  ngOnInit(): void {
+    this.getGenres();
+  }
   
   emitSearch = (form: NgForm) => {
     console.log(form);
@@ -21,4 +27,13 @@ export class SearchMoviesFormComponent implements OnInit {
     this.searchEvent.emit(form.form.value.genre);
     this.searchEvent.emit(form.form.value.rating);
   };
+  emitDiscoverEvent = (form: NgForm):void => {
+    this.discoverEvent.emit(form);
+  };
+  getGenres = ():void => {
+    this.movieService.getGenres().subscribe((response)=>{
+      this.genres = response;
+      console.log(response);
+    });
+  }
 }

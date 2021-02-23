@@ -1,3 +1,4 @@
+import { NgStyle } from '@angular/common';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -9,6 +10,8 @@ export class MovieCardComponent implements OnInit {
   @Output() favoriteEvent = new EventEmitter<any>();
   @Input() movieRef: any;
   @Input() favoritesRef: any[] = [];
+  isHidden:boolean = false;
+  favorited: boolean = true;
 
   constructor() {}
 
@@ -16,6 +19,15 @@ export class MovieCardComponent implements OnInit {
 
   emitFavoriteEvent = (movie: any): void => {
     this.favoriteEvent.emit(movie);
-    console.log(movie);
   };
+
+  toggleInfo = ():void => {
+    this.isHidden = !this.isHidden;
+  }
+
+  checkFavorite = (movie: any):boolean => {
+    return this.favoritesRef.some((item)=>{
+      return item.id === movie.id;
+    })
+  }
 }
