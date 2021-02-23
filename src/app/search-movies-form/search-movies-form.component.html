@@ -1,10 +1,15 @@
-<section class="forms-style-section">
+<i (click)="toggleSearch()" class="fas fa-search"></i>
+<section *ngIf="hiddenSearch" class="forms-style-section">
   <form #searchTerm="ngForm" (ngSubmit)="emitSearch(searchTerm)">
     <label for="searchTerm">Search</label>
     <input type="text" name="searchTerm" id="searchTerm" ngModel />
     <button>Search</button>
   </form>
-  <form #discoverForm="ngForm" (ngSubmit)="emitDiscoverEvent(discoverForm)">
+  <form
+    class="forms-style-section"
+    #discoverForm="ngForm"
+    (ngSubmit)="emitDiscoverEvent(discoverForm)"
+  >
     <label for="genre">Genre</label>
     <select name="genre" id="genre" ngModel>
       <option value="{{ genre.id }}" *ngFor="let genre of genres.genres">

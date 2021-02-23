@@ -15,8 +15,7 @@
 .movie-poster {
   display: flex;
   flex-direction: column;
-
-  width: 80%;
+  width: 60%;
   padding: 10px;
 }
 
