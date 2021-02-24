@@ -1,11 +1,14 @@
 .card-btn {
-  height: 10vh;
+  height: 6vh;
   width:50%; 
   background-color: #222831;
   color: #dddddd;
 }
+#heart {
+  font-size: 20px;
+}
 .favorite {
-  color: white;
+  color: #dddddd;
   background-color: red;
   border: 0;
   border-radius: 5px;
@@ -20,11 +23,28 @@
 .movie-poster {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  /* width: 60%; */
   padding: 10px;
+}
+
+.poster-image {
+  /* width: auto; */
 }
 
 .btn-container {
   display: flex;
   width: 100%;
+}
+
+.overview {
+  padding: 12px;
+  text-align: justify;
+  background-color: rgba(34,40,49,0.85);
+}
+
+@media screen and (min-width: 768px) {
+  .movie-poster {
+    margin: 10px;
+    max-width: 390px;
+  }
 }
