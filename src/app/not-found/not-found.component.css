@@ -1,0 +1,26 @@
+h2 {
+  text-align: center;
+}
+h3 {
+  text-align: center;
+}
+.mobile-not-found {
+  height: auto;
+  width: auto;
+}
+.browser-not-found {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .mobile-not-found {
+    display: none;
+  }
+  .browser-not-found {
+    display: flex;
+    flex-direction: row;
+    height: auto;
+    width: 90vw;
+    justify-content: center;
+    margin: auto;
+  }
+}

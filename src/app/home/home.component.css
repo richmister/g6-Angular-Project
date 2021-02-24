@@ -5,9 +5,10 @@
   width: min-content;
   padding: 5px;
   align-items: center;
+  margin: 5px auto;
 }
 
-@media screen and (min-width:768px) {
+@media screen and (min-width: 768px) {
   .movie-card-section {
     width: 100vw;
     display: flex;
