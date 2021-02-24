@@ -1,13 +1,18 @@
+.card-btn {
+  height: 10vh;
+  width:50%; 
+  background-color: #222831;
+  color: #dddddd;
+}
 .favorite {
   color: white;
   background-color: red;
   border: 0;
   border-radius: 5px;
 }
-
 .not-favorite {
   color: black;
-  background-color: white;
+  background-color: #222831;
   border: 0;
   border-radius: 5px;
 }
@@ -19,12 +24,6 @@
   padding: 10px;
 }
 
-.card-btn {
-  height: 10vh;
-  width: 50%;
-  background-color: #222831;
-  color: #dddddd;
-}
 .btn-container {
   display: flex;
   width: 100%;

@@ -6,5 +6,17 @@ ul {
 }
 a {
   text-decoration: none;
+  color: inherit;
 }
-
+.nav-list-style {
+  display: flex;
+  justify-content: space-between;
+}
+.nav-menu {
+  float: right;
+  margin-right: 10px;
+  padding: 3px;
+}
+.fa-bars {
+  float: right;
+}
