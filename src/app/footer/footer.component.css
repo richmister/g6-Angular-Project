@@ -1,4 +1,10 @@
 .footer-style {
   background-color: #222831;
   color: #dddddd;
+  bottom: 0;
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
 }
