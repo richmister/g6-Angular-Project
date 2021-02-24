@@ -1,4 +1,8 @@
+<h2 class="fav-header">Your Favorites</h2>
 <section class="movie-card-section">
-  <app-movie-card *ngFor="let favorite of favorites; index as i" [movieRef]="favorite"
-    (favoriteEvent)="onFavorite(favorite)"></app-movie-card>
+  <app-movie-card
+    *ngFor="let favorite of favorites; index as i"
+    [movieRef]="favorite"
+    (favoriteEvent)="onFavorite(favorite)"
+  ></app-movie-card>
 </section>

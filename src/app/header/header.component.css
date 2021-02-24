@@ -16,7 +16,7 @@ a {
   color: inherit;
 }
 .nav-menu-browser {
-  display: hidden;
+  display: none;
 }
 .nav-list-style {
   display: flex;
@@ -44,11 +44,18 @@ a {
     padding: 5px;
     margin: 5px;
   }
+  a {
+    font-size: 18px;
+  }
+
   .fa-bars {
     display: none;
   }
   .nav-menu-browser {
     display: flex;
     flex-direction: row;
+  }
+  .nav-menu {
+    display: none;
   }
 }
