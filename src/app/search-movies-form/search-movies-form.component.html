@@ -1,12 +1,16 @@
-<i (click)="toggleSearch()" class="fas fa-search"></i>
-<section *ngIf="hiddenSearch" class="forms-style-section">
-  <form #searchTerm="ngForm" (ngSubmit)="emitSearch(searchTerm)">
+<i (click)="toggleSearch()" class="fas fa-search search-icon"></i>
+<section *ngIf="hiddenSearch" class="forms-section">
+  <form
+    #searchTerm="ngForm"
+    (ngSubmit)="emitSearch(searchTerm)"
+    class="forms-style"
+  >
     <label for="searchTerm">Search</label>
     <input type="text" name="searchTerm" id="searchTerm" ngModel />
-    <button>Search</button>
+    <button class="formbtn">Search</button>
   </form>
   <form
-    class="forms-style-section"
+    class="forms-style"
     #discoverForm="ngForm"
     (ngSubmit)="emitDiscoverEvent(discoverForm)"
   >
@@ -29,6 +33,6 @@
       <option value="8">8</option>
       <option value="9">9</option>
     </select>
-    <button>Submit</button>
+    <button class="formbtn">Discover</button>
   </form>
 </section>
