@@ -26,6 +26,7 @@ export class HomeComponent implements OnInit {
   onSubmit = (searchTerm: string): void => {
     this.movieService.searchMovies(searchTerm).subscribe((response: any) => {
       this.movieData = response;
+      console.log(this.movieData);
     });
   };
   onFavorite = (movie: any): void => {
@@ -36,7 +37,7 @@ export class HomeComponent implements OnInit {
     this.favorites = this.movieService.getFavorites();
   };
   onDiscoverSubmit = (form: NgForm) => {
-    this.movieService.discoverMovies(form.form.value).subscribe((response)=>{
+    this.movieService.discoverMovies(form.form.value).subscribe((response) => {
       console.log(response);
       this.movieData = response;
     });
